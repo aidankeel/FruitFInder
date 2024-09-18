@@ -1,0 +1,109 @@
+/* Use border-box model for all elements */
+* {
+  box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+  /* Remove the default outline from focused elements */
+}
+
+/* Body styling */
+body {
+  font-family: Arial, sans-serif;
+  /* Use a clean font */
+  background: linear-gradient(to right, #00ffff, #076e3b);
+  /* Gradient background */
+  margin: 0;
+  padding: 0;
+
+}
+
+/* Search input styling */
+input {
+  width: 100%;
+  /* Full width for small screens */
+  padding: 15px;
+  /* Padding inside the input */
+  border: 1px solid #ccc;
+  /* Light border */
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Search container positioning */
+.search-container {
+  position: relative;
+  /* To position dropdown */
+  width: 320px;
+  /* Width of the search container */
+  margin: 50px auto 0;
+  /* Center it in the page */
+}
+
+/* Styling for the input and suggestions dropdown container */
+.search-container input,
+.search-container .suggestions {
+  width: 100%;
+}
+
+.suggestions {
+  position: relative;
+  height: -100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Suggestions dropdown styling */
+.search-container .suggestions {
+  position: absolute;
+  /* Positioned directly below search input */
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+/* Unordered list styling */
+ul {
+  list-style: none;
+  /* No bullet points for list */
+  margin: 0;
+  padding: 0;
+}
+
+/* Class to show suggestions */
+ul.has-suggestions {
+  display: block;
+  /* Will be displayed when suggestions are available */
+}
+
+/* Individual list item styling */
+ul li {
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Hover effect for suggestions */
+ul li:hover {
+  background-color: #f0f0f0;
+  /* Highlight background on hover */
+}
+
+/* Input styling */
+input {
+  background: linear-gradient(to right, #00ffff, #076e3b);
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+/* Style the input on focus */
+input:focus {
+  border-color: #da1a5a;
+  box-shadow: 0 0 5px rgba(179, 24, 76, 0.5);
+}
